@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Locadora Online</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="bg-primary text-white py-3">
+        <div class="conteudo">
+            <div class="menu-principal" id="menu-princ">
+                <h1>Estação VHS</h1>
+                <nav>
+                    <a href="" wm-link="home.html" wm-destino=".pagina">Página Principal</a>
+                    <a href="" wm-link="catalogo.html" wm-destino=".pagina">Catálogo de Filmes</a>
+                    <a href="" wm-link="descricao.html" wm-destino=".pagina">Descrição dos Filmes</a>
+                    <a href="" wm-link="contato.html" wm-destino=".pagina">Contato</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="pagina"></div>
+    <script>
+        function navegarViaAjax(url, seletor, push = true){
+            if(!url || !seletor) return
+                const elemento = document.querySelector(seletor)
+                fetch(url)
+                .then(resp => resp.text())
+                .then (html => {
+                    elemento.innerHTML = html
+                    if(push){
+                        history.push({ seletor }, "Página Ajax", url)
+                    }
+                })
+        }
+
+        document.querySelectorAll('[wm-link]').forEach(link => {
+            const url = link.attributes['wm-link'].value
+            const seletorDestino = link.attributes['wm-destino'].value
+
+            link.onclick = e => {
+                e.preventDefault()
+                navegarViaAjax(url, seletorDestino)
+            }
+        })
+
+        window.onpopstate = e => {
+            if(e.state){
+                navegarViaAjax(window.location.href, e.state.seletor, false)
+            }
+        }
+        window.onload = () =>{
+            navegarViaAjax('home.html', '.pagina', false)
+        }
+    </script>
+    
+</body>
+
+</html>

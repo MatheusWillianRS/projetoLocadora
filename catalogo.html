@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo Filmes</title>
+
+    <style>
+        body {
+            background-image: url("imagens/fundo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 130vh;
+            margin: 0;
+        }
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+                header{
+            background: linear-gradient(135deg, #990a0a, #990a0a);
+            color: #fff;  
+        }
+        .item {
+            flex: 0 0 calc(20% - 20px); /* 20% da largura menos o gap */
+            box-sizing: border-box;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            background-color: transparent;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+            color: white;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .desc {
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+       
+      </style>  
+
+       
+
+</head>
+<body>
+    <header class="bg-primary text-white py-3">
+            <div class="conteudo">
+                <div class="menu-principal" id="menu-princ">
+                    <h1 style="text-align:center; color: #ffff;">Catálogo de filmes</h1>
+
+                </div>
+            </div>
+        </header>    
+    <div class="catalogo">
+    
+
+        <!-- Filme 1 -->
+        <div class="item">
+            <img src="imagens/taxi driver.png" alt="Taxi Driver – 1976" >
+            <h3>Taxi Driver – 1976</h3>
+            <p class="preco">R$ 99,00</p>
+        </div>
+
+        <!-- Filme 2 -->
+        <div class="item">
+            <img src="imagens/whiplash.png" alt="Whiplash – 2014">
+            <h3>Whiplash – 2014</h3>
+            <p class="preco">R$ 55,00</p>
+        </div>
+      
+        <!-- Filme 3 -->
+        <div class="item">
+            <img src="imagens/fight club.png" alt="Fight Club – 1999">
+            <h3>Fight Club – 1999</h3>
+            <p class="preco">R$ 119,99</p>
+        </div>
+
+        <!-- Filme 4 -->
+        <div class="item">
+            <img src="imagens/godfather.png" alt="The Godfather – 1972">
+            <h3>The Godfather – 1972</h3>
+            <p class="preco">R$ 79,99</p>
+        </div>
+
+        <!-- Filme 5 -->
+        <div class="item">
+            <img src="imagens/scarface.png" alt="Scarface – 1983">
+            <h3>Scarface – 1983</h3>
+            <p class="preco">R$ 69,99</p>
+        </div>
+
+        <!-- Filme 6 -->
+        <div class="item">
+            <img src="imagens/constantine.png" alt="Constantine – 2005">
+            <h3>Constantine – 2005</h3>
+            <p class="preco">R$ 45,50</p>
+        </div>
+
+        <!-- Filme 7 -->
+        <div class="item">
+            <img src="imagens/blade 2.png" alt="Blade II – 2002">
+            <h3>Blade II – 2002</h3>
+            <p class="preco">R$ 37,90</p>
+        </div>
+
+        <!-- Filme 8 -->
+        <div class="item">
+            <img src="imagens/scary movie.png" alt="Scary Movie – 2000">
+            <h3>Todo mundo em panico/Scary Movie  – 2000</h3>
+            <p class="preco">R$ 29,90</p>
+        </div>
+
+        <!-- Filme 9 -->
+        <div class="item">
+            <img src="imagens/premonicao.png" alt="Premonição – 2000">
+            <h3>Premonição/Final Destination – 2000</h3>
+            <p class="preco">R$ 35,00</p>
+        </div>
+
+        <!-- Filme 10 -->
+        <div class="item">
+            <img src="imagens/crepusculo.png" alt="Twilight - 2008">
+            <h3>Crepusculo/Twilight - 2008</h3>
+            <p class="preco">R$ 19,99</p>
+        </div>
+
+    </div>
+    
+
+</body>
+</html>

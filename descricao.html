@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descrição</title>
+
+    <style>
+        body {
+            background-image: url("imagens/fundo.jpg");
+        }
+        .descricao {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 150px;
+            justify-content: center;
+            font-size: 25px;
+        }
+                header{
+            background: linear-gradient(135deg, #990a0a, #990a0a);
+            color: #fff;  
+        }
+        .item {
+            flex: 0 0 calc(20% - 20px); /* 20% da largura menos o gap */
+            box-sizing: border-box;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            background-color: transparent;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+            color: white;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .desc {
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+       
+      </style>  
+
+   
+</head>
+<body>
+
+    <header class="bg-primary text-white py-3">
+            <div class="conteudo">
+                <div class="menu-principal" id="menu-princ">
+                    <h1 style="text-align:center; color: #ffff;">Descrição dos filmes</h1>
+
+                </div>
+            </div>
+    </header>
+
+    <!-- descriçao dos filmes-->
+    <div class="descricao">
+        <div class="item">
+            <h3>Taxi Driver – 1976</h3>
+            <p>Um veterano solitário e perturbado trabalha como taxista em Nova York e gradualmente mergulha na loucura, acreditando ser o salvador de uma jovem prostituta.</p>
+        </div>
+    
+        <div class="item">
+            <h3>Whiplash - 2014 </h3>
+            <p>Um jovem baterista ambicioso entra em um conservatório de música e enfrenta o rígido e abusivo professor que o empurra aos limites em busca da perfeição.</p>
+        </div>
+
+           
+        <div class="item">
+            <h3>Fight Club - 1999 </h3>
+            <p>Um homem desiludido com a vida moderna encontra alívio em um clube secreto de lutas, mas tudo sai do controle quando ele perde a noção da realidade.</p>
+        </div>
+
+       
+        <div class="item">
+            <h3>The Godfather - 1972</h3>
+            <p>A saga da poderosa família mafiosa Corleone, mostrando a ascensão do filho mais novo, Michael, ao trono do crime organizado.</p>
+        </div>
+
+        <div class="item">
+            <h3>Scarface - 1983</h3>
+            <p> Um imigrante cubano chega a Miami e constrói um império do tráfico de drogas, mas sua ganância e violência o levam à ruína.</p>
+        </div>
+
+        <div class="item">
+            <h3>Constantine - 2005</h3>
+            <p>Um exorcista com a habilidade de ver anjos e demônios luta contra forças do inferno enquanto busca redenção por seus pecados.</p>
+        </div>
+
+        <div class="item">
+            <h3>Blade II - 2002</h3>
+            <p>O caçador de vampiros Blade se une a um grupo de vampiros para enfrentar uma ameaça ainda maior: uma raça mutante que caça humanos e vampiros.</p>
+        </div>
+
+        <div class="item">
+            <h3>Todo Mundo em Pânico - 2000</h3>
+            <p> Uma paródia hilária de filmes de terror populares, com jovens desajeitados sendo perseguidos por um assassino mascarado.</p>
+        </div>
+
+        <div class="item">
+            <h3>Premonição - 2000</h3>
+            <p>Após escapar da morte em um acidente, um grupo de jovens é perseguido por forças sobrenaturais que tentam corrigir o curso do destino.</p>
+        </div>
+
+        <div class="item">
+            <h3>Crepúsculo - 2008</h3>
+            <p>Uma adolescente se apaixona por um misterioso colega de escola, que revela ser um vampiro, dando início a uma paixão perigosa entre mundos opostos.</p>
+        </div>
+    
+
+    </div>
+</body>
+</html>
